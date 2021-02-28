@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+	body{
+		 background:purple;
+		 background-image: linear-gradient(
+      115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)
+    ),url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+  background-position: center;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+	}
+	header{
+		display: block;
+		text-align: center;
+		margin-top: 40px;
+		font-family:monospace;
+		line-height: 1;
+		font-size: 30px;
+	}
+	#title{
+		font-size: 2.5rem;
+	}
+	#description{
+		font-size: 1rem;
+	}
+	#content{
+		display: flex;
+		flex-direction: column;
+		border: 1px solid transparent;
+		max-width: 500px;
+		line-height: 1.0;
+		margin:auto;
+	    display: block;
+	    background:rgba(20, 16, 71,0.5);
+		padding:40px;
+    
+	}
+	label {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+.witdh{
+	width: 35em;
+	padding-top: 10px;
+	margin-left: 2px;
+	border-radius: 10%;
+}
+#survery-form{
+	margin-left: 2px;
+}
+#dropdown{
+	width: 35em;
+	padding-top: 5px;
+}
+#free{
+	width: 35em;
+	padding-top: 5px;
+}
+.subm{
+	width: 33em;
+	height: 3em;
+	margin: auto;
+	margin-top: 30px;
+	background:rgb(8, 240, 8);
+}
+</style>
+<head>
+	<title>Survey Form</title>
+</head>
+<body>
+	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+	<main id="main">
+		<header id="header"><h1 id="title">freeCodeCamp Survey Form</h1>
+		<p id="description">Thank you for taking the time to help us improve the platform</p>
+		</header>
+		<form id="survey-form">
+			<div id="content">
+			<label for="name" id="name-label">Name</label>
+			<input class="witdh" id="name" type="text" name="name" placeholder="enter your name" required>
+			<label for="email" id="email-label">Emial</label>
+			<input class="witdh" id="email" type="email" name="email" placeholder="enter your email" required>
+				<label for="age" id="number-label">Age</label>
+				<input class="witdh" id="number" type="number" name="age" placeholder="Age" min="0" max="20">
+			
+				<p>Which option best describes your current role?</p>
+				<select id="dropdown">
+					<option value="select" disabled>select current role</option>
+					<option value="Student">Student</option>
+					<option value="Fulltimejob">Full Time Job</option>
+					<option value="Fulltimelearner">Full Time Learner</option>
+					<option value="prefeer">Prefer Not to say</option>
+					<option value="other">Other</option>
+				</select>
+		
+				<p>Would you recommend freeCodeCamp to a friend?</p>
+				
+				<input id="def" type="radio" name="Definitely" value="definitely" class="rec" checked>Definitely
+                
+				<input id="my" type="radio" name="Definitely" value="maybe" class="rec1">Maybe
+			
+				<input id="not" type="radio" name="Definitely" value="not sure" class="rec2">Not Sure
+			   
+			    	<p>What is your favorite feature of freeCodeCamp?</p>
+			    	<select id="free">
+			    		<option>challenges</option>
+			    		<option>projects</option>
+			    		<option>community</option>
+			    		<option>open source</option>
+			    	</select>
+			    	<p>What would you like to see improved? (Check all that apply)</p>
+			    	<input type="checkbox" name="front" value="front">Front-End-Projects<br>
+			    	<input type="checkbox" name="back" value="back">Back-End-Projects<br>
+			    	<input type="checkbox" name="data" value="data">Data Visualization<br>
+			    	<input type="checkbox" name="front" value="challenge">challenges<br>
+			    	<input type="checkbox" name="front" value="open">open source community<br>
+			    	<input type="checkbox" name="front" value="gitter">Gitter help room<br>
+			    	<input type="checkbox" name="front" value="vi">Videos<br>
+			    	<input type="checkbox" name="front" value="wi">wiki<br>
+			    
+			  <textarea id="tex" name="commnet"
+          rows="5" cols="58" placeholder=" Enter your comments here...">
+</textarea><br>
+        <input class="subm" type="submit" name="sub" id="submit">
+		</form>
+		</div>
+	</main>
+</body>
+</html>
